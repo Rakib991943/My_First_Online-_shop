@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
+import { addToCard, getToCard } from "../Utilitis/Utilitis";
 
 const SingleCard = () => {
   const data = useLoaderData();
@@ -10,7 +11,12 @@ const SingleCard = () => {
     const exist = data.find(p => p.product_id == product_id);
     setProduct(exist);
   }, [data, product_id]);
-  const { id, product_title, product_image, price, description, specification, rating } = product || {};
+  const { product_title, product_image, price, description, specification, rating } = product || {};
+  const handleToCard = (product) => {
+    addToCard(product);
+    // getToCard(product);
+  }
+
   return (
 
     <div className="flex justify-center mb-7 mt-7">
@@ -30,7 +36,7 @@ const SingleCard = () => {
             <p className="text-pink-400 font-bold mt-3">Rating: </p>
             <div className="flex mt-3">
               <div>
-                <div className="rating mr-5">
+                <div className="rating mr-5 mt-3">
                   <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                   <input
                     type="radio"
@@ -47,7 +53,7 @@ const SingleCard = () => {
               </div>
             </div>
             <div className="flex">
-              <div><button className="btn btn-active btn-primary mt-3">Add To Card </button>
+              <div><button onClick={() => handleToCard(product)} className="btn btn-active btn-primary mt-3">Add To Card </button>
               </div>
               <div className="text-3xl mt-5 ml-7">
                 <FaRegHeart />

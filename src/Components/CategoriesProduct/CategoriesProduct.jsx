@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import { TiDelete } from "react-icons/ti";
 
 const CategoriesProduct = ({ categorys }) => {
 
@@ -33,6 +33,7 @@ const CategoriesProduct = ({ categorys }) => {
             </div>
           </div>
         </div>
+
       </div >
     </div>
   );

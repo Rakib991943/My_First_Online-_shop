@@ -9,6 +9,7 @@ import Setiesfies from './Components/Navbar/Satisfiests/Setiesfies';
 import SingleCard from './Components/SingleCard/SingleCard';
 import Products from './Components/Products/Products';
 import AllProducts from './Components/AllProducts/AllProducts';
+import DashBoard from './Components/Navbar/DashBoard/DashBoard';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: '/setisfied',
         element: <Setiesfies></Setiesfies>
+      },
+      {
+        path: '/DashBoard',
+        element: <DashBoard></DashBoard>
       }
     ]
   }
