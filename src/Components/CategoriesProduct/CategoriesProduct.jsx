@@ -7,7 +7,7 @@ const CategoriesProduct = ({ categorys }) => {
   return (
     <div>
       <div className="">
-        <div className="card bg-base-100 shadow-xl md:w-[394px] h-[550px] ">
+        <div className="card bg-base-100 shadow-xl md:w-[394px] h-[600px] ">
           <div className="md:w-[394px] h-[250px] ">
             <img className="w-full h-full rounded-lg p-6" src={product_image} alt="#" />
           </div>

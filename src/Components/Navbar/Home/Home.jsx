@@ -19,7 +19,7 @@ const Home = () => {
           <button className="btn mt-3 ml-3 mb-3 btn-warning" onClick={() => navigate('/AllProducts')}>All Products </button>
 
           <div className="card bg-base-100  shadow-xl mb-2">
-            <div className="tabs h-[400px] w-[150px]  tabs-lifted flex flex-col items-center ">
+            <div className="tabs h-[450px] w-[150px]  tabs-lifted flex flex-col items-center ">
               {
                 data.map(c => <NavLink to={`/category/${c.category}`} role="tab" className={({ isActive }) => `tab  font-bold mb-4  bg-gray-200 w-32 h-20 text-xl ${isActive ? 'tab-active ' : " "}`} key={c.category}>{c.category}</NavLink>)
               }

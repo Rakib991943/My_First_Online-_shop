@@ -26,5 +26,9 @@
   {
     "product_id": 7,
     "category": "Headphones"
+  },
+  {
+    "product_id": 8,
+    "category": "motherboard"
   }
 ]
